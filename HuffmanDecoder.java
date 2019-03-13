@@ -12,10 +12,15 @@ public class HuffmanDecoder
         {
             if(currentNode.getData() == null)
             {
+                system.out.println("Node =>" + currentNode.getData);
                 if(currentNum == '0')
+                {
                     currentNode = currentNode.getLeftChild();
+                }
                 else if(currentNum == '1')
+                {
                     currentNode = currentNode.getRightChild();
+                }
             }
             else
             {
@@ -35,7 +40,7 @@ public class HuffmanDecoder
         
         if(next == '0')
             return(new BinaryTreeNode<Character>(null, buildTree(), buildTree()));
-        else if(next == '1')
+        else
             return(new BinaryTreeNode<Character>((char)System.in.read()));
     }
 }
